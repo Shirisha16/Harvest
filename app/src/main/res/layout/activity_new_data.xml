@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".NewDataActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+
+        <TextView
+            android:id="@+id/caseIdTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="Case ID:" />
+
+        <EditText
+            android:id="@+id/nameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:layout_marginTop="10dp"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/phoneEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone"
+            android:maxLength="10"
+            android:layout_marginTop="10dp"
+            android:inputType="phone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date of Birth:"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/dateOfBirthEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select your date of birth"
+            android:inputType="date" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="State:"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/stateSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="District:"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/districtSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Survey Type:"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/surveyTypeRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <RadioButton
+                android:id="@+id/radioPostHarvest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Post Harvest"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/radioOthers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Others" />
+
+        </RadioGroup>
+
+
+        <!-- Post Harvest Fields -->
+        <LinearLayout
+            android:id="@+id/postHarvestFieldsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date of Crop Harvesting:"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/cropHarvestingDateEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Select the date"
+                android:inputType="date" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="% of Crop Area Harvested:"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/areaHarvestedEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter the percentage"
+                android:inputType="number" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Onfield Crop Condition:"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/onfieldCropConditionSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!-- Others Fields -->
+        <LinearLayout
+            android:id="@+id/othersFieldsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Please Specify:"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/pleaseSpecifyEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Specify the details"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Farm Image:"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Add your implementation for capturing and displaying the farm image here -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Farmer ID:"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Add your implementation for capturing and displaying the farmer ID image here -->
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bt_syncData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Sync Data to Server" />
+
+        <Button
+            android:id="@+id/bt_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Submit" />
+
+    </LinearLayout>
+</ScrollView>
